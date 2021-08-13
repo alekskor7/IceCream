@@ -1,0 +1,35 @@
+:root {
+  // Общий цвет фона и текста
+
+  --primary-color: #ffffff;
+  --second-color: #ffa5ba;
+  --accent-color: #d41443;
+
+  // Цвета фона
+
+  --primary-bg: #fff5f6;
+  --second-bg: #ffb8ca;
+  --product-card-bg: #f0d1a5;
+  --second-product-card-bg: #c2e297;
+  --customer-paragraph-bg: #fafafa;
+
+  // Цвета текста
+
+  --primary-text-color: #000000;
+  --second-text-color: #907e82;
+
+  // Другие цвета
+
+  --icon-color: #fea5bb;
+  --line-color: #e1e1e1;
+  --hover-light-button-bg: #ecebeb;
+  --hover-dark-button-bg: #c7133e;
+  --second-hower: #e8c086;
+  --third-hover: #acd17b;
+  --backdrop-background: rgba(0, 0, 0, 0.2);
+
+  --main-font: 'DM Sans', sans-serif;
+  --title-font: 'Titan One', cursive;
+
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,269 @@
+.hero {
+  max-width: 1600px;
+  z-index: -1;
+  background-color: var(--second-bg);
+
+  @media screen and (max-width: 767px) {
+    height: 502px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 399px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 665px;
+  }
+}
+
+.hero--container {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    padding: 102px 34px 28px 34px;
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 102px 34px 28px 34px;
+    max-width: 1280px;
+  }
+}
+.hero--container {
+  overflow: hidden;
+}
+
+.hero__title {
+  font-family: var(--title-font);
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1.13;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--primary-color);
+
+  margin-bottom: 20px;
+  z-index: -3;
+}
+
+.hero__title-highlight {
+  font-size: 48px;
+  line-height: 0.97;
+
+  text-transform: uppercase;
+
+  color: var(--accent-color);
+}
+
+.hero__container-title {
+  position: absolute;
+  top: 193px;
+  left: 20px;
+  z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    top: 102px;
+    left: 34px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 171px;
+    left: 115px;
+  }
+}
+
+.hero__ice-cream-container {
+  position: absolute;
+  top: 83px;
+  right: 0;
+
+  @media screen and (min-width: 768px) {
+    top: 31px;
+    right: 137px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 52px;
+    left: 475px;
+  }
+}
+
+.hero__ice-cream {
+  position: absolute;
+  top: 9px;
+  left: 81px;
+
+  @media screen and (min-width: 768px) {
+    top: 32px;
+    right: 71px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 56px;
+    left: 119px;
+  }
+}
+
+.hero__bio-container {
+  position: absolute;
+  bottom: 28px;
+  left: 34px;
+
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 429px;
+    left: 77px;
+  }
+}
+
+.hero__text-container {
+  width: 114px;
+
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+  }
+}
+
+.hero__text {
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.5;
+  flex-grow: 1;
+
+  color: var(--primary-color);
+  margin-bottom: 7px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.hero__girl-container {
+  position: absolute;
+  bottom: 0;
+  right: 34px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: 0;
+    right: 109px;
+  }
+}
+
+.hero__about {
+  position: absolute;
+  right: 34px;
+  bottom: 205px;
+  height: 100px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 156px;
+    left: 1111px;
+  }
+}
+
+.about__our-performance {
+  padding-left: 10px;
+  margin-bottom: 10px;
+
+  font-family: var(--title-font);
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--accent-color);
+  z-index: 2;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+}
+
+.about__trucks {
+  font-family: var(--main-font);
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: left;
+
+  color: var(--primary-color);
+
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
+    line-height: 1.28;
+    white-space: pre;
+  }
+}
+
+.about__item {
+  position: relative;
+  padding-top: 12px;
+  width: 72px;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.about__cafes {
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: center;
+
+  color: var(--primary-color);
+
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.about__ellipse {
+  position: absolute;
+  top: 0;
+  left: 37px;
+
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    top: 12px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 10px;
+    left: 53px;
+    width: 30px;
+    height: 30px;
+  }
+}

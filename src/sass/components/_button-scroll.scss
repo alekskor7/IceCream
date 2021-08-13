@@ -1,0 +1,28 @@
+.scrollup {
+  position: fixed;
+  background-color: var(--hover-dark-button-bg);
+  right: 20px;
+  bottom: 20px;
+  padding-top: 4px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+
+  transition: background-color var(--animation), transform var(--animation);
+}
+.scrollup:hover,
+.scrollup:focus {
+  transform: scale(1.1);
+  background-color: var(--product-card-bg);
+  & .button-up {
+    fill: var(--hover-dark-button-bg);
+  }
+}
+
+.button-up {
+  transition: fill var(--animation), transform var(--animation);
+  fill: var(--primary-color);
+}

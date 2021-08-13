@@ -1,0 +1,139 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #e17992;
+  transition: 0.5s;
+  z-index: 99;
+  &.is-open.is-close {
+    left: -9999px;
+  }
+  &.is-open {
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 60px 24px 60px 24px;
+  }
+  &.is-close {
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 60px 24px 60px 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.mobile-menu__close,
+.mobile-menu__close.is-close {
+  position: absolute;
+  top: 20px;
+  left: 90%;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+
+  transition: fill var(--animation);
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+.mobile-menu__burger {
+  position: absolute;
+  display: inline-flex;
+  top: 23px;
+  right: 34px;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+
+  transition: fill var(--animation);
+
+  @media screen and (min-width: 768px) {
+    top: 50px;
+    right: 230px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.menu-btn__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-btn__close {
+  display: none;
+  stroke: var(--primary-color);
+  width: 14px;
+  height: 14 px;
+
+  .is-open & {
+    display: block;
+  }
+}
+.menu-btn__icon-burger {
+  stroke: var(--accent-color);
+}
+
+.is-open .menu-btn__icon-burger {
+  width: 20px;
+  height: 12px;
+
+  stroke: var(--accent-color);
+}
+
+.mobile-menu__btn:hover .menu-btn__icon,
+.mobile-menu__btn:focus .menu-btn__icon {
+  fill: var(--accent-color);
+}
+
+.mobile-menu__list {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--primary-color);
+  margin-top: 19px;
+  margin-bottom: 32px;
+}
+
+.mobile-menu__item {
+  border-bottom: 1px solid #e18298;
+
+  height: 42px;
+  padding-top: 11px;
+}
+
+.mobile-menu__item:first-child {
+  border-top: 1px solid #e18298;
+}
+
+.mobile-menu__link {
+  margin-left: 21px;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-menu .button-header {
+  display: block;
+  margin: 0 auto;
+}

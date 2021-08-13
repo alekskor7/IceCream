@@ -1,0 +1,28 @@
+%button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-color: transparent;
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%section-padding {
+  padding: 95px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 110px 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 130px 0;
+  }
+}

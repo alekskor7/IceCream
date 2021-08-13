@@ -1,0 +1,228 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 150;
+  overflow-y: scroll;
+  visibility: visible;
+  opacity: 1;
+  overflow-y: scroll;
+  transition: opacity var(--animation), visibility var(--animation);
+
+  background-color: var(--backdrop-background);
+
+  @media screen and (max-width: 597px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--animation), visibility var(--animation);
+
+  max-height: 100vh;
+  overflow-y: auto;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-color: var(--primary-bg);
+
+  @media screen and (max-width: 479px) {
+    position: relative;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modal__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  background: var(--primary-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--primary-text-color);
+
+  transition: color var(--animation);
+}
+
+.modal__icon {
+  fill: currentColor;
+  transition: color var(--animation);
+}
+
+.modal__btn:hover,
+.modal__btn:focus {
+  color: var(--accent-color);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  padding: 40px;
+}
+
+.form__title {
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.form-group {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group__comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-group__label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+
+.form-group__contact {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color var(--animation);
+}
+
+.form-input {
+  height: 40px;
+  padding-left: 42px;
+  margin: 0;
+
+  background-color: var(--primary-bg);
+}
+
+.form-group__contact:focus + .form-group__icon,
+.form-group__contact:focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.form-group__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+  fill: var(--primary-text-color);
+
+  transition: fill var(--animation);
+}
+
+.form__textarea {
+  height: 120px;
+  padding: 12px 14px;
+
+  background-color: var(--primary-bg);
+}
+
+.form__textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  color: 1px solid var(--primary-text-color);
+}
+
+.form__checkbox-label {
+  display: block;
+  margin-bottom: 30px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+.form__checkbox-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 3px;
+  margin-right: 7px;
+}
+
+.form__checkbox:checked + .form__checkbox-label::before {
+  background-image: url(../images/icons/svg/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: var(--accent-color);
+  border: var(--accent-color);
+}
+
+.form__checkbox:focus + .form__checkbox-label::before {
+  border-color: var(--accent-color);
+}
+
+.form__checkbox-link {
+  color: var(--accent-color);
+  margin-left: 4px;
+}
